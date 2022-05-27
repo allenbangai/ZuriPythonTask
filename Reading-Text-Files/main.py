@@ -4,13 +4,10 @@
 # --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
 
 def read_file_content(filename):
-    # [assignment] Add your code here 
-    
-    return "Hello World"
-
+    return open(filename, 'r').read()
 
 def count_words():
-    text = read_file_content("./story.txt")
-    # [assignment] Add your code here
+    text = read_file_content("story.txt")
+    return {"as": text.count("as"), "would": text.count("would")}
 
-    return {"as": 10, "would": 20}
+print(count_words())
